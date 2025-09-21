@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // TruthTrack verification colors
+        verified: {
+          DEFAULT: "hsl(var(--verified))",
+          foreground: "hsl(var(--verified-foreground))",
+        },
+        disputed: {
+          DEFAULT: "hsl(var(--disputed))",
+          foreground: "hsl(var(--disputed-foreground))",
+        },
+        false: {
+          DEFAULT: "hsl(var(--false))",
+          foreground: "hsl(var(--false-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +75,17 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        "card": "var(--shadow-card)",
+        "elevation": "var(--shadow-elevation)",
+      },
+      transitionTimingFunction: {
+        "smooth": "var(--transition-smooth)",
       },
       keyframes: {
         "accordion-down": {
