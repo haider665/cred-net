@@ -4,8 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import Welcome from "./pages/Welcome";
 import Dashboard from "./pages/Dashboard";
+import Report from "./pages/Report";
+import Verify from "./pages/Verify";
+import Rewards from "./pages/Rewards";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,12 +21,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Welcome />} />
+            <Route index element={<Dashboard />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="report" element={<div className="p-6 text-center">Report Page - Coming Soon</div>} />
-            <Route path="verify" element={<div className="p-6 text-center">Verify Page - Coming Soon</div>} />
-            <Route path="rewards" element={<div className="p-6 text-center">Rewards Page - Coming Soon</div>} />
-            <Route path="profile" element={<div className="p-6 text-center">Profile Page - Coming Soon</div>} />
+            <Route path="report" element={<Report />} />
+            <Route path="verify" element={<Verify />} />
+            <Route path="rewards" element={<Rewards />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
